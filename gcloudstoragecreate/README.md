@@ -23,8 +23,8 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
 * This example uses the Google Cloud Client Library for Java.
 
-The Google Cloud Client Library for Java is the idiomatic way for Java developers to integrate with Google Cloud Platform services,
-like Cloud Datastore and Cloud Storage. You can install the package for an individual API using Maven, Gradle, SBT, ...
+  The Google Cloud Client Library for Java is the idiomatic way for Java developers to integrate with Google Cloud Platform services,
+  like Cloud Datastore and Cloud Storage. You can install the package for an individual API using Maven, Gradle, SBT, etc.
 
 This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16.x
 
@@ -35,32 +35,32 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16
 
 * Configure your Google Cloud access keys.
 
-The Google Cloud client library for Java allows you to use several authentication schemes.
+  The Google Cloud client library for Java allows you to use several authentication schemes.
 
-The application uses Application Default Credentials through a JSON service account key for authenticating.
+  The application uses Application Default Credentials through a JSON service account key for authenticating.
 
-The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
+  The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
 
-For example:
+  For example:
 
-GOOGLE_APPLICATION_CREDENTIALS = /path/to/my/key.json
+  GOOGLE_APPLICATION_CREDENTIALS = /path/to/my/key.json
 
-Use the [Google Cloud Platform console](http://cloud.google.com/):
+  Use the [Google Cloud Platform console](http://cloud.google.com/):
 
   * Go to the Google Cloud Project 
 
   * Prepare the credentials:
     * Create a Service account
       Example:
-```
-Name: gcloud-java-examples
-Role: Owner
-Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
-```
+      ```
+      Name: gcloud-java-examples
+      Role: Owner
+      Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
+      ```
 
-      * Create a key as JSON file and download it.
+    * Create a key as JSON file and download it.
 
-      * Add the Service accounts id (Ex. gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
+    * Add the Service accounts id (Ex. gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
 
 * Create a Google Cloud Storage bucket.
 
@@ -68,14 +68,14 @@ Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccoun
 
 * Run the code:
 
-You must provide 1 parameter:
+  You must provide 1 parameter:
 
-<BUCKET> = Name of bucket
+  <BUCKET> = Name of bucket
 
-```
-java -jar out/artifacts/gcloudstoragecreate_jar/gcloudstoragecreate.jar bucket-example
-```
+  ```
+  java -jar out/artifacts/gcloudstoragecreate_jar/gcloudstoragecreate.jar bucket-example
+  ```
 
 * Test the application:
 
-You should see the new Google Storage bucket created in a Google Cloud Project.
+  You should see the new Google Storage bucket created in a Google Cloud Project.
