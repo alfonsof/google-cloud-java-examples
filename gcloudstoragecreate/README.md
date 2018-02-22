@@ -51,6 +51,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16
 
   * Prepare the credentials:
     * Create a Service account
+    
       Example:
       ```
       Name: gcloud-java-examples
@@ -58,13 +59,11 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16
       Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
       ```
 
-    * Create a key as JSON file and download it.
+    * Create a key as a JSON file and download it.
 
-    * Add the Service accounts id (Ex. gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
-
-* Create a Google Cloud Storage bucket.
-
-* Copy some files to the Google Cloud Storage bucket.
+    * Add the Service accounts id (Ex.: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
+    
+  * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
 * Run the code:
 
