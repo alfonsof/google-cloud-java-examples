@@ -67,7 +67,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
     
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
-  * Create a Google Cloud Storage bucket.
+* Create a Google Cloud Storage bucket.
 
 * Copy some files to the Google Cloud Storage bucket.
 
