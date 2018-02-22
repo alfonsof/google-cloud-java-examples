@@ -13,13 +13,18 @@ The code for the samples is contained in individual folders on this repository. 
 * [gcloudcomputeengine](/gcloudcomputeengine) - Google Cloud Compute Engine instances: Example of how to handle Compute Engine instances
 
 **Storage - Cloud Storage:**
-* [gcloudstoragesimplelistall](/gcloudstoragesimplelistall) - Google Cloud Storage Simple List All: Example of how to handle Cloud Storage buckets and list information about the files in every buckets of a project
-using the easiest authentication scheme to take advantage of "Application Default Credentials."
-* [gcloudstoragelistall](/gcloudstoragelistall) - Google Cloud Storage List All: Example of how to handle Cloud Storage buckets and list information about the files in every bucket of a project
-using a JSON authentication file as authentication scheme
-* [gcloudstoragelist](/gcloudstoragelist) - Google Cloud Storage List: Example of how to handle Cloud Storage buckets and list information about the files in a bucket of a project
-using a JSON authentication file as authentication scheme
-
+* [gcloudstoragecreate](/gcloudstoragecreate) - Google Cloud Storage Create: Example of how to handle Cloud Storage buckets and
+create a new Google Storage bucket for a Google Cloud Project..
+* [gcloudstoragedelete](/gcloudstoragedelete) - Google Cloud Storage Create: Example of how to handle Cloud Storage buckets and
+delete a Google Storage bucket for a Google Cloud Project..
+* [gcloudstoragelistall](/gcloudstoragelistall) - Google Cloud Storage List All: Example of how to handle Cloud Storage buckets and
+list all Cloud Storage buckets and the files they contain for a Google Cloud Project.
+The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable
+* [gcloudstoragelistallparam](/gcloudstoragelistallparam) - Google Cloud Storage List All Parameters: Example of how to handle Cloud Storage buckets and
+list all Cloud Storage buckets and the files they contain for a Google Cloud Project.
+The user must provide the credentials using the application parameters.
+* [gcloudstoragelist](/gcloudstoragelist) - Google Cloud Storage List: Example of how to handle Cloud Storage buckets and
+list the files in a Cloud Storage bucket for a Google Cloud Project.
 
 For instructions on running the code, please consult the README in each folder. 
 
