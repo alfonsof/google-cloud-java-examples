@@ -26,7 +26,7 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
   The Google Cloud Client Library for Java is the idiomatic way for Java developers to integrate with Google Cloud Platform services,
   like Cloud Datastore and Cloud Storage. You can install the package for an individual API using Maven, Gradle, SBT, etc.
 
-This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16.x
+This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
 
 
