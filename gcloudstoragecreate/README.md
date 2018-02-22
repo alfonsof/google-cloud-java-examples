@@ -17,9 +17,9 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
 * You can install and use the Google Cloud SDK.
 
-The Google Cloud SDK is a set of tools for Google Cloud Platform.
-It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery,
-and other products and services from the command line. You can run these tools interactively or in your automated scripts.
+  The Google Cloud SDK is a set of tools for Google Cloud Platform.
+  It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery,
+  and other products and services from the command line. You can run these tools interactively or in your automated scripts.
 
 * This example uses the Google Cloud Client Library for Java.
 
