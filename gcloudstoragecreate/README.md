@@ -42,17 +42,19 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16
   The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
 
   For example:
-
+  
+  ```
   GOOGLE_APPLICATION_CREDENTIALS = /path/to/my/key.json
+  ```
 
   Use the [Google Cloud Platform console](http://cloud.google.com/):
 
-  * Go to the Google Cloud Project 
+  * Go to the Google Cloud Project. 
 
   * Prepare the credentials:
-    * Create a Service account
+    * Create a Service account.
     
-      Example:
+      For example:
       ```
       Name: gcloud-java-examples
       Role: Owner
@@ -69,7 +71,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java 1.16
 
   You must provide 1 parameter:
 
-  <BUCKET> = Name of bucket
+  BUCKET_NAME = Name of the bucket
 
   ```
   java -jar out/artifacts/gcloudstoragecreate_jar/gcloudstoragecreate.jar bucket-example
