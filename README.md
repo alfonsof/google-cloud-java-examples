@@ -10,7 +10,7 @@ This repo contains Java code examples on the Google Cloud Platform (GCP).
 The code for the samples is contained in individual folders on this repository. You can see the list:
 
 **Compute - Compute Engine:**
-* [gcloudcomputeengine](/) - Google Cloud Compute Engine instances: Example of how to handle Compute Engine instances
+* [gcloudcomputeengine](/gcloudcomputeengine) - Google Cloud Compute Engine instances: Example of how to handle Compute Engine instances
 
 **Storage - Cloud Storage:**
 * [gcloudstoragecreate](/gcloudstoragecreate) - Google Cloud Storage Create: Example of how to handle Cloud Storage buckets and
