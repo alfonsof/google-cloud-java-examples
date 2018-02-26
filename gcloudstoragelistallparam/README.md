@@ -78,7 +78,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   <PROJECT_ID> = Name of the Google Cloud Project
 
   ```
-  java -jar out/artifacts/gcloudstoragelistallparam_jar/gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples-45b588704dbf.json gcloud-java-examples
+  java -jar gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples-45b588704dbf.json gcloud-java-examples
   ```
 
 * Test the application:
