@@ -68,7 +68,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
 * Run the code:
 
   ```
-  java -jar out/artifacts/gcloudcomputeengine_jar/gcloudcomputeengine.jar
+  java -jar gcloudcomputeengine.jar
   ```
 
   You can select an option in the menu in order to run every command:
