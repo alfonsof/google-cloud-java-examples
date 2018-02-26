@@ -74,7 +74,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   <BUCKET_NAME> = Name of the bucket
 
   ```
-  java -jar out/artifacts/gcloudstoragecreate_jar/gcloudstoragecreate.jar bucket-example
+  java -jar gcloudstoragecreate.jar bucket-example
   ```
 
 * Test the application:
