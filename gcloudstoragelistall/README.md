@@ -74,7 +74,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
 * Run the code:
 
   ```
-  java -jar out/artifacts/gcloudstoragelistall_jar/gcloudstoragelistall.jar
+  java -jar gcloudstoragelistall.jar
   ```
 
 * Test the application:
