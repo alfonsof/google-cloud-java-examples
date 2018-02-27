@@ -21,7 +21,7 @@ create a new Google Storage bucket in a Google Cloud Project.
 delete a Google Storage bucket in a Google Cloud Project.
 * [gcloudstoragelistall](/gcloudstoragelistall) - Google Cloud Storage List All: Example of how to handle Cloud Storage buckets and
 list all Cloud Storage buckets and the files they contain in a Google Cloud Project.
-The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable
+The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
 * [gcloudstoragelistallparam](/gcloudstoragelistallparam) - Google Cloud Storage List All Parameters: Example of how to handle Cloud Storage buckets and
 list all Cloud Storage buckets and the files they contain in a Google Cloud Project.
 The user must provide the credentials using the application parameters.
