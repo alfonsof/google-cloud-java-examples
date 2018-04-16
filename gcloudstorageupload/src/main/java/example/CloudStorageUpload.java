@@ -11,8 +11,6 @@
 
 package example;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
@@ -53,8 +51,8 @@ public class CloudStorageUpload {
         BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType("text/plain").build();
 
         if (Files.size(Paths.get(uploadFileName)) > 1_000_000) {
-            // When content is not available or large (1MB or more) it is recommended
-            // to write it in chunks via the blob's channel writer.
+            // When content size is not available or large (1MB or more) it is recommended
+            // to write it in chunks via the blob's channel writer
             try (WriteChannel writer = storage.writer(blobInfo)) {
                 byte[] buffer = new byte[1024];
                 try (InputStream input = Files.newInputStream(Paths.get(uploadFileName))) {
