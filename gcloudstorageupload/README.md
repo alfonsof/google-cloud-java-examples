@@ -73,7 +73,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
   <BUCKET_NAME>     = Name of the bucket
   
-  <OBJECT_NAME>     = Object file name in the bucket
+  <OBJECT_NAME>     = Object name in the bucket
   
   <LOCAL_FILE_NAME> = Local file name
 
