@@ -3,7 +3,7 @@
  * Download an object in a Cloud Storage bucket in a Google Cloud Project to a local file.
  * The application uses Application Default Credentials through a JSON service account key for authenticating.
  * The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
- * You must use 1 parameter:
+ * You must use 3 parameters:
  * BUCKET_NAME     = Bucket name
  * OBJECT_NAME     = Object name in the bucket
  * LOCAL_FILE_NAME = Local file name
