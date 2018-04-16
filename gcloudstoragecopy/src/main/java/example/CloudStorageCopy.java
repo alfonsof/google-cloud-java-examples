@@ -27,7 +27,7 @@ public class CloudStorageCopy {
         String destinationBlobName;    // Destination blob name
 
         if (args.length < 3) {
-            System.out.println("Not enough parameters. Proper Usage is: java -jar s3copy.jar <SOURCE_BUCKET> <SOURCE_FILE> <DESTINATION_BUCKET>");
+            System.out.println("Not enough parameters. Proper Usage is: java -jar gcloudstoragecopy.jar <SOURCE_BUCKET> <SOURCE_FILE> <DESTINATION_BUCKET>");
             System.exit(1);
         }
 
@@ -50,7 +50,7 @@ public class CloudStorageCopy {
 
         CopyWriter copyWriter = sourceBlob.copyTo(BlobId.of(destinationBucketName, destinationBlobName));
         Blob copiedBlob = copyWriter.getResult();
-        
+
         if (copiedBlob != null) {
             System.out.println("Copied");
         } else {
