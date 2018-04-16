@@ -78,7 +78,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   <LOCAL_FILE_NAME> = Local file name
 
   ```
-  java -jar gcloudstoragedownload.jar bucket-example object-name local-file-name
+  java -jar gcloudstoragedownload.jar bucket-example object-example local-file-example
   ```
 
 * Test the application:
