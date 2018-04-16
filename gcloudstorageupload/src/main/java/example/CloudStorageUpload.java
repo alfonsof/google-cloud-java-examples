@@ -3,9 +3,9 @@
  * Upload a local file to a Google Storage bucket for a Google Cloud Project.
  * The application uses Application Default Credentials through a JSON service account key for authenticating.
  * The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
- * You must use 1 parameter:
+ * You must use 3 parameters:
  * BUCKET_NAME     = Bucket name
- * OBJECT_NAME     = Object file name in the bucket
+ * OBJECT_NAME     = Object name in the bucket
  * LOCAL_FILE_NAME = Local file name
  */
 
