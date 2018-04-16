@@ -27,6 +27,8 @@ list all Cloud Storage buckets and the files they contain in a Google Cloud Proj
 The user must provide the credentials using the application parameters.
 * [gcloudstoragelist](/gcloudstoragelist) - Google Cloud Storage List: Example of how to handle Cloud Storage buckets and
 list the files in a Cloud Storage bucket in a Google Cloud Project.
+* [gcloudstoragecopy](/gcloudstoragecopy) - Google Cloud Storage List: Example of how to handle Cloud Storage buckets and
+copy an object from a Google Storage bucket to another Google Storage bucket in a Google Cloud Project.
 * [gcloudstorageupload](/gcloudstorageupload) - Google Cloud Storage Upload: Example of how to handle Cloud Storage buckets and
 upload a local file to a Cloud Storage bucket in a Google Cloud Project.
 * [gcloudstoragedownload](/gcloudstoragedownload) - Google Cloud Storage Download: Example of how to handle Cloud Storage buckets and
