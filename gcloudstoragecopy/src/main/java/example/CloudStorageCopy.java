@@ -50,11 +50,11 @@ public class CloudStorageCopy {
 
         CopyWriter copyWriter = sourceBlob.copyTo(BlobId.of(destinationBucketName, destinationBlobName));
         Blob copiedBlob = copyWriter.getResult();
-
         if (copiedBlob != null) {
             System.out.println("Copied");
         } else {
             System.out.println("Error: NOT copied");
         }
+
     }
 }
