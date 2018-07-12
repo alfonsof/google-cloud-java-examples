@@ -1,5 +1,5 @@
 /**
- * ComputeEngineSHelp class with methods for managing Google Cloud Compute Engine instances
+ * ComputeEngineSHelper class with methods for managing Google Cloud Compute Engine instances
  */
 
 package example;
@@ -29,7 +29,7 @@ import com.google.cloud.compute.MachineTypeId;
 import com.google.cloud.compute.InstanceInfo;
 
 
-public class ComputeEngineHelper {
+public final class ComputeEngineHelper {
 
     private static final String IMAGE_NAME          = "ubuntu-1604-xenial-v20180222"; // Image name
     private static final String IMAGE_PROJECT_NAME  = "ubuntu-os-cloud";              // Image project name
@@ -42,8 +42,7 @@ public class ComputeEngineHelper {
     private static final String REGION_ADDRESS_NAME = "my-address";                   // Name of the region address
     private static final String NETWORK_NAME        = "default";                      // Name of the network
 
-    public ComputeEngineHelper() {
-
+    private ComputeEngineHelper() {
     }
 
 
