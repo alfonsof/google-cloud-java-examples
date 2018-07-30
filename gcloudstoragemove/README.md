@@ -67,20 +67,20 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
     
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
-* Run the code:
+* Run the code.
 
   You must provide 3 parameters:
   
-  <SOURCE_BUCKET>      = Source bucket name
-  
-  <SOURCE_FILE>        = Source file name
-  
-  <DESTINATION_BUCKET> = Destination bucket name
+  * `<SOURCE_BUCKET>`      = Source bucket name
+  * `<SOURCE_FILE>`        = Source file name
+  * `<DESTINATION_BUCKET>` = Destination bucket name
 
+  Run application:
+  
   ```
   java -jar gcloudstoragemove.jar source-bucket source-file destination-bucket
   ```
 
-* Test the application:
+* Test the application.
 
   The file from the source Google Storage bucket should be moved to the target Google Storage bucket in a Google Cloud Project.

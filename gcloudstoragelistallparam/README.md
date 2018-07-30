@@ -69,18 +69,19 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
 * Copy some files to the Google Cloud Storage bucket.
 
-* Run the code:
+* Run the code.
 
   You must provide 2 parameters:
 
-  <CREDENTIALS_FILE_NAME> = Path and name of the JSON credential file
+  * `<CREDENTIALS_FILE_NAME>` = Path and name of the JSON credential file
+  * `<PROJECT_ID>`            = Name of the Google Cloud Project
 
-  <PROJECT_ID> = Name of the Google Cloud Project
-
+  Run application:
+  
   ```
   java -jar gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples-45b588704dbf.json gcloud-java-examples
   ```
 
-* Test the application:
+* Test the application.
 
   You should see the list of all the files in every Cloud Storage bucket in a Google Cloud Project.

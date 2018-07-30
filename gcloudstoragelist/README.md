@@ -71,16 +71,18 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
 * Copy some files to the Google Cloud Storage bucket.
 
-* Run the code:
+* Run the code.
 
   You must provide 1 parameter:
 
-  <BUCKET_NAME> = Name of the bucket
+  * `<BUCKET_NAME>` = Name of the bucket
 
+  Run application:
+  
   ```
   java -jar gcloudstoragelist.jar bucket-example
   ```
 
-* Test the application:
+* Test the application.
 
   You should see the list of all the files in the Cloud Storage bucket in a Google Cloud Project.

@@ -67,16 +67,18 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
     
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
-* Run the code:
+* Run the code.
 
   You must provide 1 parameter:
 
-  <BUCKET_NAME> = Name of the bucket
+  * `<BUCKET_NAME>` = Name of the bucket
 
+  Run application:
+  
   ```
   java -jar gcloudstoragecreate.jar bucket-example
   ```
 
-* Test the application:
+* Test the application.
 
   You should see the new Google Storage bucket created in a Google Cloud Project.

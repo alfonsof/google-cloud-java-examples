@@ -65,8 +65,10 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
     
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
-* Run the code:
+* Run the code.
 
+  Run application:
+  
   ```
   java -jar gcloudcomputeengine.jar
   ```
@@ -80,3 +82,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   * 5 = Stop instance
   * 6 = Reset instance
   * 7 = Delete instance
+
+* Test the application.
+
+  You should see the new instance and modification of states with the Google Cloud console.
