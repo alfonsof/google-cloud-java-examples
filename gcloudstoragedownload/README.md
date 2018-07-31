@@ -8,9 +8,6 @@ The application uses Application Default Credentials through a JSON service acco
 
 The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
 
-
-
-
 ## Requirements
 
 * You must have a [Google Cloud Platform (GCP) account](http://cloud.google.com/).
@@ -28,9 +25,6 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
 This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
-
-
-
 ## Using the code
 
 * Configure your Google Cloud access keys.
@@ -42,20 +36,21 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
 
   For example:
-  
-  ```
+
+  ```bash
   GOOGLE_APPLICATION_CREDENTIALS = /path/to/my/key.json
   ```
 
   Use the [Google Cloud Platform console](http://cloud.google.com/):
 
-  * Go to the Google Cloud Project. 
+  * Go to the Google Cloud Project.
 
   * Prepare the credentials:
     * Create a Service account.
-    
+
       For example:
-      ```
+
+      ```bash
       Name: gcloud-java-examples
       Role: Owner
       Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
@@ -64,7 +59,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
     * Create a key as a JSON file and download it.
 
     * Add the Service accounts id (Ex.: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
-    
+
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
 * Run the code.
@@ -76,8 +71,8 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   * `<LOCAL_FILE_NAME>` = Local file name
 
   Run application:
-  
-  ```
+
+  ```bash
   java -jar gcloudstoragedownload.jar bucket-example object-example local-file-example
   ```
 

@@ -8,9 +8,6 @@ The application uses Application Default Credentials through a JSON service acco
 
 The user must provide the credentials using the application parameters.
 
-
-
-
 ## Requirements
 
 * You must have a [Google Cloud Platform (GCP) account](http://cloud.google.com/).
@@ -28,9 +25,6 @@ The user must provide the credentials using the application parameters.
 
 This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
-
-
-
 ## Using the code
 
 * Configure your Google Cloud access keys.
@@ -42,8 +36,8 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   The user must provide the credentials using the application parameters.
 
   For example:
-  
-  ```
+
+  ```bash
   GOOGLE_APPLICATION_CREDENTIALS = /path/to/my/key.json
   ```
 
@@ -53,9 +47,10 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
 
   * Prepare the credentials:
     * Create a Service account.
-    
+
       For example:
-      ```
+
+      ```bash
       Name: gcloud-java-examples
       Role: Owner
       Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
@@ -64,7 +59,7 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
     * Create a key as a JSON file and download it.
 
     * Add the Service accounts id (Ex.: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
-    
+
 * Create a Google Cloud Storage bucket.
 
 * Copy some files to the Google Cloud Storage bucket.
@@ -77,8 +72,8 @@ This code was written for Java 1.8 and Google Cloud Client Library for Java.
   * `<PROJECT_ID>`            = Name of the Google Cloud Project
 
   Run application:
-  
-  ```
+
+  ```bash
   java -jar gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples-45b588704dbf.json gcloud-java-examples
   ```
 
