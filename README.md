@@ -1,4 +1,4 @@
-# Java examples on GCP (Google Cloud Platform)
+# Java examples on Google Cloud Platform (GCP)
 
 This repo contains Java code examples on Google Cloud Platform (GCP).
 
