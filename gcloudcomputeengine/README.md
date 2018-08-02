@@ -1,6 +1,6 @@
 # Google Cloud Compute Engine instances Java example
 
-This folder contains a Java application example that handles Compute Engine instances on GCP (Google Cloud Platform).
+This folder contains a Java application example that handles Compute Engine instances on Google Cloud Platform (GCP).
 
 The application uses Application Default Credentials through a JSON service account key for authenticating.
 
@@ -8,7 +8,7 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
 ## Requirements
 
-* You must have a [Google Cloud Platform (GCP) account](http://cloud.google.com/).
+* You must have a [Google Cloud Platform (GCP)](http://cloud.google.com/) account.
 
 * You can install and use the Google Cloud SDK.
 

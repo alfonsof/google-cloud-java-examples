@@ -1,10 +1,10 @@
 # Java examples on GCP (Google Cloud Platform)
 
-This repo contains Java code examples on the Google Cloud Platform (GCP).
+This repo contains Java code examples on Google Cloud Platform (GCP).
 
 ## Quick start
 
-You must have a [Google Cloud Platform (GCP) account](http://cloud.google.com/).
+You must have a [Google Cloud Platform (GCP)](http://cloud.google.com/) account.
 
 The code for the samples is contained in individual folders on this repository. You can see the list:
 

@@ -1,6 +1,6 @@
 # Google Cloud Storage Move Java example
 
-This folder contains a Java application example that handles Cloud Storage buckets on GCP (Google Cloud Platform).
+This folder contains a Java application example that handles Cloud Storage buckets on Google Cloud Platform (GCP).
 
 Move an object from a Google Storage bucket to another Google Storage bucket in a Google Cloud Project.
 
@@ -10,7 +10,7 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
 ## Requirements
 
-* You must have a [Google Cloud Platform (GCP) account](http://cloud.google.com/).
+* You must have a [Google Cloud Platform (GCP)](http://cloud.google.com/) account.
 
 * You can install and use the Google Cloud SDK.
 

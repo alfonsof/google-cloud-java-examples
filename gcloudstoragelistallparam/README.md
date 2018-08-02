@@ -1,6 +1,6 @@
 # Google Cloud Storage List All Parameters Java example
 
-This folder contains a Java application example that handles Cloud Storage buckets on GCP (Google Cloud Platform).
+This folder contains a Java application example that handles Cloud Storage buckets on Google Cloud Platform (GCP).
 
 List all Cloud Storage buckets and the files they contain for a Google Cloud Project.
 
@@ -10,7 +10,7 @@ The user must provide the credentials using the application parameters.
 
 ## Requirements
 
-* You must have a [Google Cloud Platform (GCP) account](http://cloud.google.com/).
+* You must have a [Google Cloud Platform (GCP)](http://cloud.google.com/) account.
 
 * You can install and use the Google Cloud SDK.
 
