@@ -6,7 +6,7 @@ Download an object in a Cloud Storage bucket in a Google Cloud Project to a loca
 
 The application uses Application Default Credentials through a JSON service account key for authenticating.
 
-The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
+The credentials are taken from `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
   The application uses Application Default Credentials through a JSON service account key for authenticating.
 
-  The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
+  The credentials are taken from `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
 
   For example:
 
