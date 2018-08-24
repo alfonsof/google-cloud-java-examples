@@ -2,6 +2,10 @@
 
 This repo contains Java code examples on Google Cloud Platform (GCP).
 
+These examples show how to use Java 1.8 and Google Cloud Client Library for Java in order to manage services on Google Cloud Platform.
+
+Google Cloud Client Library for Java allows Java developers to write software that makes use of Google Cloud services like Compute Engine and Cloud storage.
+
 ## Quick start
 
 You must have a [Google Cloud Platform (GCP)](http://cloud.google.com/) account.
