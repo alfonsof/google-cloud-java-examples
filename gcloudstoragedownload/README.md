@@ -19,7 +19,7 @@ Download an object in a Cloud Storage bucket in a Google Cloud Project to a loca
   The Google Cloud Client Library for Java is the idiomatic way for Java developers to integrate with Google Cloud Platform services,
   like Cloud Datastore and Cloud Storage. You can install the package for an individual API using Maven, Gradle, SBT, etc.
 
-* The code was written for Java 1.8 and Google Cloud Client Library for Java.
+* The code was written for Java 8 and Google Cloud Client Library for Java.
 
 ## Using the code
 
