@@ -10,7 +10,11 @@ Google Cloud Client Library for Java allows Java developers to write software th
 
 You must have a [Google Cloud Platform (GCP)](http://cloud.google.com/) account.
 
-The code for the samples is contained in individual folders on this repository. You can see the list:
+The code for the samples is contained in individual folders on this repository.
+
+For instructions on running the code, please consult the README in each folder.
+
+This is the list of examples:
 
 **Compute - Compute Engine:**
 
@@ -30,8 +34,6 @@ The code for the samples is contained in individual folders on this repository. 
 * [gcloudstoragedownload](/gcloudstoragedownload) - Google Cloud Storage Download: Example of how to handle Cloud Storage buckets and download an object in a Cloud Storage bucket in a Google Cloud Project to a local file.
 * [gcloudstoragecopy](/gcloudstoragecopy) - Google Cloud Storage Copy: Example of how to handle Cloud Storage buckets and copy an object from a Google Storage bucket to another Google Storage bucket in a Google Cloud Project.
 * [gcloudstoragemove](/gcloudstoragemove) - Google Cloud Storage Move: Example of how to handle Cloud Storage buckets and move an object from a Google Storage bucket to another Google Storage bucket in a Google Cloud Project.
-
-For instructions on running the code, please consult the README in each folder. 
 
 ## License
 
