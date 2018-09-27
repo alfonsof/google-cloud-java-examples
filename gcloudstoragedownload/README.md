@@ -2,7 +2,7 @@
 
 This folder contains a Java application example that handles Cloud Storage buckets on Google Cloud Platform (GCP).
 
-Download an object in a Cloud Storage bucket in a Google Cloud Project to a local file.
+Download an object from a Cloud Storage bucket in a Google Cloud Project to a local file.
 
 ## Requirements
 
