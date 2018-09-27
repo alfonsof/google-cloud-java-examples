@@ -70,9 +70,9 @@ List all Cloud Storage buckets and the files they contain for a Google Cloud Pro
   Run application:
 
   ```bash
-  java -jar gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples-45b588704dbf.json gcloud-java-examples
+  java -jar gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples.json gcloud-java-examples
   ```
 
 * Test the application.
 
-  You should see the list of all the files in every Cloud Storage bucket in a Google Cloud Project.
+  You should see the list of buckets and objects stored in each Cloud Storage bucket in the Google Cloud Project.
