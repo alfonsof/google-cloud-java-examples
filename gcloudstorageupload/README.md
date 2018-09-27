@@ -2,7 +2,7 @@
 
 This folder contains a Java application example that handles Cloud Storage buckets on Google Cloud Platform (GCP).
 
-Upload a local file to a Google Storage bucket for a Google Cloud Project.
+Upload a local file to a Google Storage bucket in a Google Cloud Project.
 
 ## Requirements
 
@@ -74,4 +74,4 @@ Upload a local file to a Google Storage bucket for a Google Cloud Project.
 
 * Test the application.
 
-  You should see the new created file in the Google Storage bucket in a Google Cloud Project.
+  You should see the new object created in the Google Storage bucket in a Google Cloud Project.
