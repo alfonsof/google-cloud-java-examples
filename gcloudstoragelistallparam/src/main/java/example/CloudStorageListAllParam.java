@@ -1,15 +1,16 @@
 /**
- * CloudStorageListAllParam is an example that handles Cloud Storage buckets on GCP (Google Cloud Platform)
- * List all Cloud Storage buckets and the files they contain for a Google Cloud Project.
+ * CloudStorageListAllParam is an example that handles Cloud Storage buckets on GCP (Google Cloud Platform).
+ * List information about all Cloud Storage buckets and the objects that they contain in a Google Cloud Project.
  * The application uses Application Default Credentials through a JSON service account key for authenticating.
  * The user must provide the credentials using the application parameters.
- * You must use 2 parameters:
+ * You must provide 2 parameters:
  * CREDENTIALS_FILE_NAME = Path and name of the JSON credential file
  * PROJECT_ID = Name of the Google Cloud Project
  */
 
 package example;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -27,15 +28,22 @@ public class CloudStorageListAllParam {
         String projectId;        // Project ID
 
         if (args.length < 2) {
-            System.out.println("Not enough parameters. Proper Usage is: java -jar cloudstoragelistall.jar <CREDENTIALS_FILE_NAME> <PROJECT_ID>");
+            System.out.println("Not enough parameters.\nProper Usage is: java -jar cloudstoragelistall.jar <CREDENTIALS_FILE_NAME> <PROJECT_ID>");
             System.exit(1);
         }
 
         credentialsFile = args[0];
         projectId = args[1];
 
-        System.out.println("Credentials: " + credentialsFile);
-        System.out.println("Project ID: " + projectId);
+        System.out.println("Credentials file: " + credentialsFile);
+        System.out.println("Project ID:       " + projectId);
+
+        // Get credentials file
+        File file = new File(credentialsFile);
+        if (!file.exists()) {
+            System.out.printf("Error: Credentials file \"%s\" does NOT exist.", credentialsFile);
+            System.exit(1);
+        }
 
         // Gets credentials
         Credentials credentials = null;
@@ -52,15 +60,15 @@ public class CloudStorageListAllParam {
                 .build()
                 .getService();
 
-        // Lists buckets
+        System.out.println("Listing Cloud Storage buckets and objects ...");
+        // Lists Buckets
         for (Bucket bucket : storage.list().iterateAll()) {
-            System.out.printf("Bucket %s:\n", bucket.getName());
-            System.out.println(bucket);
-            // list a bucket's blobs
+            System.out.println("* Bucket: " + bucket.getName());
+            // Lists Objects
             for (Blob blob : bucket.list().iterateAll()) {
-                System.out.printf("File %s:\n", blob.getName());
-                System.out.println(blob);
+                System.out.println("  - Object: " + blob.getName() + " (size = " + blob.getSize() + ")");
             }
         }
+        System.out.println("Listed");
     }
 }
