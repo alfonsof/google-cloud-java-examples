@@ -58,7 +58,7 @@ Create a new Google Storage bucket for a Google Cloud Project.
 
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
-* You can select the Google Cloud Storage location changing the value of `STORAGE_LOCATION` variable in the code.
+* You can select the Cloud Storage bucket location changing the value of `STORAGE_LOCATION` variable in the code.
 
 * Run the code.
 
