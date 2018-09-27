@@ -74,4 +74,4 @@ Create a new Google Storage bucket for a Google Cloud Project.
 
 * Test the application.
 
-  You should see the new Google Storage bucket created in a Google Cloud Project.
+  You should see the new Cloud Storage bucket created in the Google Cloud Project.
