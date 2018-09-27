@@ -2,7 +2,7 @@
 
 This folder contains a Java application example that handles Cloud Storage buckets on Google Cloud Platform (GCP).
 
-Create a new Google Storage bucket for a Google Cloud Project.
+Create a new Google Storage bucket in a Google Cloud Project.
 
 ## Requirements
 
