@@ -2,7 +2,7 @@
 
 This folder contains a Java application example that handles Cloud Storage buckets on Google Cloud Platform (GCP).
 
-List the files in a Cloud Storage bucket for a Google Cloud Project.
+List the files in a Cloud Storage bucket in a Google Cloud Project.
 
 ## Requirements
 
@@ -76,4 +76,4 @@ List the files in a Cloud Storage bucket for a Google Cloud Project.
 
 * Test the application.
 
-  You should see the list of all the files in the Cloud Storage bucket in a Google Cloud Project.
+  You should see the list of all the objects in the Cloud Storage bucket in a Google Cloud Project.
