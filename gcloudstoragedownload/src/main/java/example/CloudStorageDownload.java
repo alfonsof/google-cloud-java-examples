@@ -1,6 +1,6 @@
 /**
  * CloudStorageDownload is an example that handles Cloud Storage buckets on GCP (Google Cloud Platform)
- * Download an object in a Cloud Storage bucket in a Google Cloud Project to a local file.
+ * Download an object from a Cloud Storage bucket in a Google Cloud Project to a local file.
  * The application uses Application Default Credentials through a JSON service account key for authenticating.
  * The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
  * You must use 3 parameters:
@@ -29,28 +29,30 @@ public class CloudStorageDownload {
     public static void main(String[] args) throws IOException {
         String bucketName;       // Bucket name
         String blobName;         // Key name, it is the object name
-        String downloadFileName; // Download local file name
+        String localFileName;    // Local file name
 
         if (args.length < 3) {
-            System.out.println("Not enough parameters. Proper Usage is: java -jar cloudtoragedownload.jar <BUCKET_NAME> <OBJECT_NAME> <LOCAL_FILE_NAME>");
+            System.out.println("Not enough parameters.\nProper Usage is: java -jar cloudtoragedownload.jar <BUCKET_NAME> <OBJECT_NAME> <LOCAL_FILE_NAME>");
             System.exit(1);
         }
 
         bucketName = args[0];
         blobName = args[1];
-        downloadFileName = args[2];
+        localFileName = args[2];
 
         System.out.println("Bucket:     " + bucketName);
-        System.out.println("Object/Key: " + blobName);
-        System.out.println("Local file: " + downloadFileName);
+        System.out.println("Object:     " + blobName);
+        System.out.println("Local file: " + localFileName);
 
         // Instantiates a client
         Storage storage = StorageOptions.getDefaultInstance().getService();
 
+        System.out.println("Downloading an object from a Cloud Storage bucket to a local file ...");
+
         // Download a blob to local file
         Blob blob = storage.get(bucketName, blobName);
         if (blob != null) {
-            OutputStream outputStream = Files.newOutputStream(Paths.get(downloadFileName));
+            OutputStream outputStream = Files.newOutputStream(Paths.get(localFileName));
             if (blob.getSize() > 1_000_000) {
                 // When Blob size is big or unknown use the blob's channel reader
                 try (ReadChannel reader = blob.reader()) {
@@ -68,13 +70,13 @@ public class CloudStorageDownload {
                 }
             } else {
                 ReadChannel readChannel = blob.reader();
-                FileOutputStream fileOuputStream = new FileOutputStream(downloadFileName);
+                FileOutputStream fileOuputStream = new FileOutputStream(localFileName);
                 fileOuputStream.getChannel().transferFrom(readChannel, 0, Long.MAX_VALUE);
                 fileOuputStream.close();
             }
             System.out.println("Downloaded");
         } else {
-            System.out.println("Error: Bucket/Blob no such object");
+            System.out.println("Error: Bucket/Blob no such object.");
         }
     }
 }
