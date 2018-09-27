@@ -72,4 +72,4 @@ Delete a Google Storage bucket for a Google Cloud Project.
 
 * Test the application.
 
-  You should see the Google Storage bucket deleted in a Google Cloud Project.
+  You should see the Google Storage bucket deleted in the Google Cloud Project.
