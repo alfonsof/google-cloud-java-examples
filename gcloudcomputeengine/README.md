@@ -47,7 +47,7 @@ This folder contains a Java application example that handles Compute Engine inst
       ```bash
       Name: gcloud-java-examples
       Role: Owner
-      Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
+      Email: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com
       ```
 
     * Create a key as a JSON file and download it.

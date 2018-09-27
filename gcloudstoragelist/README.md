@@ -49,7 +49,7 @@ List the files in a Cloud Storage bucket for a Google Cloud Project.
       ```bash
       Name: gcloud-java-examples
       Role: Owner
-      Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
+      Email: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com
       ```
 
     * Create a key as a JSON file and download it.

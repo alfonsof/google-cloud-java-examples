@@ -49,7 +49,7 @@ Move an object from a Google Storage bucket to another Google Storage bucket in 
       ```bash
       Name: gcloud-java-examples
       Role: Owner
-      Service account ID: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com)
+      Email: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com
       ```
 
     * Create a key as a JSON file and download it.
