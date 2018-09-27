@@ -72,4 +72,4 @@ List information about all Cloud Storage buckets and the objects that they conta
 
 * Test the application.
 
-  You should see the list of buckets and objects stored in each Cloud Storage bucket in a Google Cloud Project.
+  You should see the list of buckets and objects stored in each Cloud Storage bucket in the Google Cloud Project.
