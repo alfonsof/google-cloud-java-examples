@@ -1,5 +1,5 @@
 /**
- * ComputeEngineSHelper class with methods for managing Google Cloud Compute Engine instances
+ * ComputeEngineSHelper class with methods for managing Google Cloud Compute Engine VM instances.
  */
 
 package example;
@@ -47,61 +47,7 @@ public final class ComputeEngineHelper {
 
 
     /**
-     * Create an external region IP address
-     */
-    private static RegionAddressId createRegionIpAddress(Compute compute) {
-        RegionAddressId addressId = RegionAddressId.of(REGION_NAME, REGION_ADDRESS_NAME);
-        Operation operation = compute.create(AddressInfo.of(addressId));
-        // Wait for operation to complete
-        try {
-            operation = operation.waitFor();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (TimeoutException e) {
-            e.printStackTrace();
-        }
-        if (operation.getErrors() == null) {
-            System.out.println("Address " + addressId + " was successfully created");
-        } else {
-            // Inspect operation.getErrors()
-            throw new RuntimeException("Address creation failed");
-        }
-
-        return addressId;
-    }
-
-
-    /**
-     * Create a persistent disk
-     */
-    private static DiskId CreatePersistentDisk(Compute compute) {
-
-        ImageId imageId = ImageId.of(IMAGE_PROJECT_NAME, IMAGE_NAME);
-        DiskId diskId = DiskId.of(ZONE_NAME, DISK_NAME);
-        ImageDiskConfiguration diskConfiguration = ImageDiskConfiguration.of(imageId);
-        DiskInfo disk = DiskInfo.of(diskId, diskConfiguration);
-        Operation operation = compute.create(disk);
-        // Wait for operation to complete
-        try {
-            operation = operation.waitFor();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (TimeoutException e) {
-            e.printStackTrace();
-        }
-        if (operation.getErrors() == null) {
-            System.out.println("Disk " + diskId + " was successfully created");
-        } else {
-            // Inspect operation.getErrors()
-            throw new RuntimeException("Disk creation failed");
-        }
-
-        return diskId;
-    }
-
-
-    /**
-     * List Compute Engine instances
+     * List Compute Engine VM instances
      */
     public static void listInstances() {
 
@@ -109,6 +55,8 @@ public final class ComputeEngineHelper {
 
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
+
+        System.out.println("Listing VM instances ...");
 
         // List instances
         instancePage = compute.listInstances();
@@ -118,21 +66,23 @@ public final class ComputeEngineHelper {
         Iterator<Instance> iterator = instancePage.iterateAll();
         while (iterator.hasNext()) {
             Instance instance = iterator.next();
-            System.out.printf("Instance: %s:\n", instance.getInstanceId().getInstance());
-            System.out.printf("Data instance:\n %s:\n\n", instance);
+            System.out.printf("Instance: %s\n", instance.getInstanceId().getInstance());
+            System.out.printf("Data instance:\n%s\n\n", instance);
         }
     }
 
 
     /**
-     * Run a Compute Engine instance
+     * Create a Compute Engine VM instance
      * Create an instance and create a boot disk on the fly
      */
-    public static InstanceId runInstance() {
+    public static InstanceId createInstance() {
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
 
-        // Create a Compute Engine instance
+        System.out.println("Creating VM instance ...");
+
+        // Create a Compute Engine VM instance
         InstanceId instanceId = InstanceId.of(ZONE_NAME, INSTANCE_NAME);
         NetworkId networkId = NetworkId.of(NETWORK_NAME);
         ImageId imageId = ImageId.of(IMAGE_PROJECT_NAME, IMAGE_NAME);
@@ -153,22 +103,24 @@ public final class ComputeEngineHelper {
             e.printStackTrace();
         }
         if (operation.getErrors() == null) {
-            System.out.println("Instance " + instanceId + " was successfully created");
+            System.out.println("Created, instance: " + instanceId);
         } else {
             // Inspect operation.getErrors()
-            throw new RuntimeException("Instance creation failed");
+            throw new RuntimeException("Error: Instance creation failed.");
         }
         return instanceId;
     }
 
 
     /**
-     * Run a Compute Engine instance in another way
-     * Create an instance, create a boot disk and a external IP address
+     * Create a Compute Engine VM instance in another way
+     * Create an instance, create a boot disk and an external IP address
      */
-    public static InstanceId runInstanceDiskAndAddress() {
+    public static InstanceId createInstanceDiskAndAddress() {
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
+
+        System.out.println("Creating VM instance ...");
 
         // Create an external region IP address
         RegionAddressId addressId = createRegionIpAddress(compute);
@@ -176,7 +128,7 @@ public final class ComputeEngineHelper {
         // Create a persistent disk
         DiskId diskId = CreatePersistentDisk(compute);
 
-        // Create a Compute Engine instance
+        // Create a Compute Engine VM instance
         Address externalIp = compute.getAddress(addressId);
         InstanceId instanceId = InstanceId.of(ZONE_NAME, INSTANCE_NAME);
         NetworkId networkId = NetworkId.of(NETWORK_NAME);
@@ -200,58 +152,62 @@ public final class ComputeEngineHelper {
             e.printStackTrace();
         }
         if (operation.getErrors() == null) {
-            System.out.println("Instance " + instanceId + " was successfully created");
+            System.out.println("Created, instance: " + instanceId);
         } else {
             // Inspect operation.getErrors()
-            throw new RuntimeException("Instance creation failed");
+            throw new RuntimeException("Error: Instance creation failed.");
         }
         return instanceId;
     }
 
 
     /**
-     * List a Compute Engine instance
+     * List a Compute Engine VM instance
      */
     public static void listInstance(InstanceId instanceId) {
 
         if (instanceId == null) {
-            System.out.println("ERROR: NO Instance");
+            System.out.println("Error: NO Instance.");
             return;
         }
 
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
+
+        System.out.println("Listing VM instance ...");
 
         // Get instance
         Instance instance = compute.getInstance(instanceId);
 
         if (instanceId == null) {
-            System.out.printf("Instance %s does not exist\n", instanceId);
+            System.out.printf("Error: Instance \"%s\" does NOT exist.\n", instanceId);
         } else {
-            System.out.printf("Instance: %s:\n", instanceId.getInstance());
-            System.out.printf("Data instance:\n %s:\n\n", instance);
+            System.out.printf("Instance: %s\n", instanceId.getInstance());
+            System.out.printf("Data instance:\n%s\n\n", instance);
         }
     }
 
 
     /**
-     * Start a Compute Engine instance
+     * Start a Compute Engine VM instance
      */
     public static void startInstance(InstanceId instanceId) {
 
         if (instanceId == null) {
-            System.out.println("ERROR: NO Instance");
+            System.out.println("Error: NO Instance.");
             return;
         }
 
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
+
+        System.out.println("Starting VM instance ...");
 
         // Start instance
         Operation operation = compute.start(instanceId);
 
         if (operation == null) {
-            System.out.printf("Instance %s does not exist\n", instanceId);
+            System.out.printf("Error: Instance \"%s\" does NOT exist.\n", instanceId);
             return;
         }
 
@@ -265,32 +221,34 @@ public final class ComputeEngineHelper {
         }
 
         if (operation.getErrors() == null) {
-            System.out.println("Instance " + instanceId + " was successfully started");
+            System.out.println("Started, instance: " + instanceId);
         } else {
             // Inspect operation.getErrors()
-            throw new RuntimeException("Instance start failed");
+            throw new RuntimeException("Error: Instance start failed.");
         }
     }
 
 
     /**
-     * Stop a Compute Engine instance
+     * Stop a Compute Engine VM instance
      */
     public static void stopInstance(InstanceId instanceId) {
 
         if (instanceId == null) {
-            System.out.println("ERROR: NO Instance");
+            System.out.println("Error: NO Instance.");
             return;
         }
 
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
 
-        // Start instance
+        System.out.println("Stopping VM instance ...");
+
+        // Stop instance
         Operation operation = compute.stop(instanceId);
 
         if (operation == null) {
-            System.out.printf("Instance %s does not exist\n", instanceId);
+            System.out.printf("Error: Instance \"%s\" does NOT exist.\n", instanceId);
             return;
         }
 
@@ -304,32 +262,34 @@ public final class ComputeEngineHelper {
         }
 
         if (operation.getErrors() == null) {
-            System.out.println("Instance " + instanceId + " was successfully stopped");
+            System.out.println("Stopped, instance: " + instanceId);
         } else {
             // Inspect operation.getErrors()
-            throw new RuntimeException("Instance stop failed");
+            throw new RuntimeException("Error: Instance stop failed.");
         }
     }
 
 
     /**
-     * Reset a Compute Engine instance
+     * Reset a Compute Engine VM instance
      */
     public static void resetInstance(InstanceId instanceId) {
 
         if (instanceId == null) {
-            System.out.println("ERROR: NO Instance");
+            System.out.println("Error: NO Instance.");
             return;
         }
 
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
 
-        // Start instance
+        System.out.println("Resetting VM instance ...");
+
+        // Reset instance
         Operation operation = compute.reset(instanceId);
 
         if (operation == null) {
-            System.out.printf("Instance %s does not exist\n", instanceId);
+            System.out.printf("Error: Instance \"%s\" does NOT exist.\n", instanceId);
             return;
         }
 
@@ -343,32 +303,34 @@ public final class ComputeEngineHelper {
         }
 
         if (operation.getErrors() == null) {
-            System.out.println("Instance " + instanceId + " was successfully reset");
+            System.out.println("Reset, instance: " + instanceId);
         } else {
             // Inspect operation.getErrors()
-            throw new RuntimeException("Instance reset failed");
+            throw new RuntimeException("Error: Instance reset failed.");
         }
     }
 
 
     /**
-     * Delete a Compute Engine instance
+     * Delete a Compute Engine VM instance
      */
     public static void deleteInstance(InstanceId instanceId) {
 
         if (instanceId == null) {
-            System.out.println("ERROR: NO Instance");
+            System.out.println("Error: NO Instance.");
             return;
         }
 
         // Instantiate a client
         Compute compute = ComputeOptions.getDefaultInstance().getService();
+
+        System.out.println("Deleting VM instance ...");
 
         // Delete instance
         Operation operation = compute.deleteInstance(instanceId);
 
         if (operation == null) {
-            System.out.printf("Instance %s does not exist\n", instanceId);
+            System.out.printf("Error: Instance \"%s\" does NOT exist.\n", instanceId);
             return;
         }
 
@@ -382,10 +344,66 @@ public final class ComputeEngineHelper {
         }
 
         if (operation.getErrors() == null) {
-            System.out.println("Instance " + instanceId + " was successfully deleted");
+            System.out.println("Deleted, instance: " + instanceId);
         } else {
             // Inspect operation.getErrors()
-            throw new RuntimeException("Instance deletion failed");
+            throw new RuntimeException("Error: Instance deletion failed.");
         }
+    }
+
+
+    /**
+     * Create an external region IP address
+     */
+    private static RegionAddressId createRegionIpAddress(Compute compute) {
+        System.out.println("Creating Region IP Address ...");
+        RegionAddressId addressId = RegionAddressId.of(REGION_NAME, REGION_ADDRESS_NAME);
+        Operation operation = compute.create(AddressInfo.of(addressId));
+        // Wait for operation to complete
+        try {
+            operation = operation.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
+        if (operation.getErrors() == null) {
+            System.out.println("Created, Region IP Address: " + addressId);
+        } else {
+            // Inspect operation.getErrors()
+            throw new RuntimeException("Error: Address creation failed.");
+        }
+
+        return addressId;
+    }
+
+
+    /**
+     * Create a persistent disk
+     */
+    private static DiskId CreatePersistentDisk(Compute compute) {
+
+        System.out.println("Creating Persistent Disk ...");
+        ImageId imageId = ImageId.of(IMAGE_PROJECT_NAME, IMAGE_NAME);
+        DiskId diskId = DiskId.of(ZONE_NAME, DISK_NAME);
+        ImageDiskConfiguration diskConfiguration = ImageDiskConfiguration.of(imageId);
+        DiskInfo disk = DiskInfo.of(diskId, diskConfiguration);
+        Operation operation = compute.create(disk);
+        // Wait for operation to complete
+        try {
+            operation = operation.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
+        if (operation.getErrors() == null) {
+            System.out.println("Created, Disk: " + diskId);
+        } else {
+            // Inspect operation.getErrors()
+            throw new RuntimeException("Error: Disk creation failed.");
+        }
+
+        return diskId;
     }
 }

@@ -1,6 +1,6 @@
 /**
- * ComputeEngineInstances is an example that handles Compute Engine Instances on GCP (Google Cloud Platform)
- * Using the AWSHelper class
+ * ComputeEngineInstances is an example that handles Compute Engine Instances on GCP (Google Cloud Platform).
+ * Using the AWSHelper class.
  */
 
 package example;
@@ -10,19 +10,20 @@ import java.util.Scanner;
 import com.google.cloud.compute.InstanceId;
 
 public class ComputeEngineInstances {
+
     /**
      * Print a menu in the screen with the available options
      */
     private static void printMenu() {
         System.out.println("\nMENU");
         System.out.println("0 = Quit");
-        System.out.println("1 = List all instances");
-        System.out.println("2 = Run new instance");
-        System.out.println("3 = List instance");
-        System.out.println("4 = Start instance");
-        System.out.println("5 = Stop instance");
-        System.out.println("6 = Reset instance");
-        System.out.println("7 = Delete instance");
+        System.out.println("1 = List all VM instances");
+        System.out.println("2 = Create VM instance");
+        System.out.println("3 = List VM instance");
+        System.out.println("4 = Start VM instance");
+        System.out.println("5 = Stop VM instance");
+        System.out.println("6 = Reset VM instance");
+        System.out.println("7 = Delete VM instance");
         System.out.println("Enter an option?");
     }
 
@@ -53,12 +54,13 @@ public class ComputeEngineInstances {
 
             switch (option) {
                 case 0:
+                    System.out.println("\nBye");
                     break;
                 case 1:  // List all instances
                     ComputeEngineHelper.listInstances();
                     break;
                 case 2:  // Run instance
-                    instanceId = ComputeEngineHelper.runInstance();
+                    instanceId = ComputeEngineHelper.createInstance();
                     break;
                 case 3:  // List instance
                     ComputeEngineHelper.listInstance(instanceId);
