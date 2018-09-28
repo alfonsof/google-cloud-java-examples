@@ -63,15 +63,15 @@ Copy an object from a Google Storage bucket to another Google Storage bucket in 
   You must provide 3 parameters:
   
   * `<SOURCE_BUCKET>`      = Source bucket name
-  * `<SOURCE_FILE>`        = Source file name
+  * `<SOURCE_OBJECT>`      = Source object name
   * `<DESTINATION_BUCKET>` = Destination bucket name
 
   Run application:
 
   ```bash
-  java -jar gcloudstoragecopy.jar source-bucket source-file destination-bucket
+  java -jar gcloudstoragecopy.jar source-bucket source-object destination-bucket
   ```
 
 * Test the application.
 
-  The file from the source Google Storage bucket should be copied to the target Google Storage bucket in a Google Cloud Project.
+  The object from the source Google Storage bucket should be copied to the target Google Storage bucket in the Google Cloud Project.
