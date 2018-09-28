@@ -3,7 +3,7 @@
  * Copy an object from a Cloud Storage bucket to another Cloud Storage bucket in a Google Cloud Project.
  * The application uses Application Default Credentials through a JSON service account key for authenticating.
  * The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variable.
- * You must use 3 parameters:
+ * You must provide 3 parameters:
  * SOURCE_BUCKET      = Source bucket name
  * SOURCE_OBJECT      = Source object name
  * DESTINATION_BUCKET = Destination bucket name
