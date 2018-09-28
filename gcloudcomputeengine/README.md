@@ -1,6 +1,6 @@
 # Google Cloud Compute Engine instances Java example
 
-This folder contains a Java application example that handles Compute Engine instances on Google Cloud Platform (GCP).
+This folder contains a Java application example that handles Compute Engine VM instances on Google Cloud Platform (GCP).
 
 ## Requirements
 
@@ -56,6 +56,8 @@ This folder contains a Java application example that handles Compute Engine inst
 
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
+* You can select the GCP Region changing the value of `REGION_NAME` variable and the GCP Zone changing the value of `ZONE_NAME` variable in the code.
+
 * Run the code.
 
   Run application:
@@ -66,14 +68,14 @@ This folder contains a Java application example that handles Compute Engine inst
 
   You can select an option in the menu in order to run every command:
 
-  * 1 = List all instances
-  * 2 = Run new instance
-  * 3 = List instance
-  * 4 = Start instance
-  * 5 = Stop instance
-  * 6 = Reset instance
-  * 7 = Delete instance
+  * 1 = List all VM instances
+  * 2 = Create VM instance
+  * 3 = List VM instance
+  * 4 = Start VM instance
+  * 5 = Stop VM instance
+  * 6 = Reset VM instance
+  * 7 = Delete VM instance
 
 * Test the application.
 
-  You should see the new instance and modification of states with the Google Cloud console.
+  You should see the new VM instance and modification of states with the Google Cloud console.
