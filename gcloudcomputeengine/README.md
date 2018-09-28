@@ -1,4 +1,4 @@
-# Google Cloud Compute Engine instances Java example
+# Google Cloud Compute Engine VM instances Java example
 
 This folder contains a Java application example that handles Compute Engine VM instances on Google Cloud Platform (GCP).
 
