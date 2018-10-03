@@ -16,12 +16,12 @@ The user must provide the credentials using the application parameters.
   It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery,
   and other products and services from the command line. You can run these tools interactively or in your automated scripts.
 
+* The code was written for Java 8 and Google Cloud Client Library for Java.
+
 * This example uses the Google Cloud Client Library for Java.
 
   The Google Cloud Client Library for Java is the idiomatic way for Java developers to integrate with Google Cloud Platform services,
   like Cloud Datastore and Cloud Storage. You can install the package for an individual API using Maven, Gradle, SBT, etc.
-
-* The code was written for Java 8 and Google Cloud Client Library for Java.
 
 ## Using the code
 
