@@ -31,17 +31,11 @@ The user must provide the credentials using the application parameters.
 
   The application uses Application Default Credentials through a JSON service account key for authenticating.
 
-  The credentials are taken from `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
-
-  For example:
-
-  ```bash
-  GOOGLE_APPLICATION_CREDENTIALS = /path/to/my/key.json
-  ```
+  The credentials are taken from the file name provided by application parameters.
 
   Use the [Google Cloud Platform console](http://cloud.google.com/):
 
-  * Go to the Google Cloud Project. 
+  * Go to the Google Cloud Project.
 
   * Prepare the credentials:
     * Create a Service account.
@@ -57,10 +51,6 @@ The user must provide the credentials using the application parameters.
     * Create a key as a JSON file and download it.
 
     * Add the Service accounts id (Ex.: gcloud-java-examples@gcloud-java-examples.iam.gserviceaccount.com) as a member of the project in the IAM.
-
-* Create a Google Cloud Storage bucket.
-
-* Copy some files to the Google Cloud Storage bucket.
 
 * Run the code.
 

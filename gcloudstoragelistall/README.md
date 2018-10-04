@@ -60,10 +60,6 @@ The credentials are taken from GOOGLE_APPLICATION_CREDENTIALS environment variab
 
   * Set the GOOGLE_APPLICATION_CREDENTIALS environment variable in your Operating System with the path of your JSON service account key file.
 
-* Create a Google Cloud Storage bucket.
-
-* Copy some files to the Google Cloud Storage bucket.
-
 * Run the code.
 
   Run application:
