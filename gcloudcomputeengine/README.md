@@ -12,7 +12,11 @@ This folder contains a Java application example that handles Compute Engine VM i
   It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery,
   and other products and services from the command line. You can run these tools interactively or in your automated scripts.
 
-* The code was written for Java 8 and Google Cloud Client Library for Java.
+* The code was written for:
+ 
+  *  Java 8
+  *  Apache Maven 3
+  *  Google Cloud Client Library for Java
 
 * This example uses the Google Cloud Client Library for Java.
 
