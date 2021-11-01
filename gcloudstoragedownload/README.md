@@ -46,6 +46,7 @@ Download an object from a Cloud Storage bucket in a Google Cloud Project to a lo
   * Go to the Google Cloud Project.
 
   * Prepare the credentials:
+
     * Create a Service account.
 
       For example:
@@ -64,16 +65,16 @@ Download an object from a Cloud Storage bucket in a Google Cloud Project to a lo
 
 * Run the code.
 
-  You must provide 3 parameters:
+  You must provide 3 parameters, replace the values of:
 
-  * `<BUCKET_NAME>`     = Name of the bucket
-  * `<OBJECT_NAME>`     = Object name in the bucket
-  * `<LOCAL_FILE_NAME>` = Local file name
+  * `<BUCKET_NAME>`     by name of the bucket.
+  * `<OBJECT_NAME>`     by object name in the bucket.
+  * `<LOCAL_FILE_NAME>` by local file name.
 
   Run application:
 
   ```bash
-  java -jar gcloudstoragedownload.jar bucket-example object-example local-file-example
+  java -jar gcloudstoragedownload.jar <BUCKET_NAME> <OBJECT_NAME> <LOCAL_FILE_NAME>
   ```
 
 * Test the application.

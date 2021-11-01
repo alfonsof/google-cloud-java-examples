@@ -46,6 +46,7 @@ Create a new Google Storage bucket in a Google Cloud Project.
   * Go to the Google Cloud Project.
 
   * Prepare the credentials:
+
     * Create a Service account.
 
       For example:
@@ -66,14 +67,14 @@ Create a new Google Storage bucket in a Google Cloud Project.
 
 * Run the code.
 
-  You must provide 1 parameter:
-
-  * `<BUCKET_NAME>` = Name of the bucket
+  You must provide 1 parameter, replace the value of:
+  
+  * `<BUCKET_NAME>` by Bucket name.
 
   Run application:
 
   ```bash
-  java -jar gcloudstoragecreate.jar bucket-example
+  java -jar gcloudstoragecreate.jar <BUCKET_NAME>
   ```
 
 * Test the application.

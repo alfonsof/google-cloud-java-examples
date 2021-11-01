@@ -46,6 +46,7 @@ Delete a Google Storage bucket for a Google Cloud Project.
   * Go to the Google Cloud Project.
 
   * Prepare the credentials:
+
     * Create a Service account.
 
       For example:
@@ -64,14 +65,14 @@ Delete a Google Storage bucket for a Google Cloud Project.
 
 * Run the code.
 
-  You must provide 1 parameter:
-
-  * `<BUCKET_NAME>` = Name of the bucket
+  You must provide 1 parameter, replace the value of:
+  
+  * `<BUCKET_NAME>` by Bucket name.
 
   Run application:
 
   ```bash
-  java -jar gcloudstoragedelete.jar bucket-example
+  java -jar gcloudstoragedelete.jar <BUCKET_NAME>
   ```
 
 * Test the application.

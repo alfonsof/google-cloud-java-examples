@@ -44,6 +44,7 @@ This folder contains a Java application example that handles Compute Engine VM i
   * Go to the Google Cloud Project.
 
   * Prepare the credentials:
+  
     * Create a Service account.
 
       For example:

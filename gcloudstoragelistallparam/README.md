@@ -42,6 +42,7 @@ The user must provide the credentials using the application parameters.
   * Go to the Google Cloud Project.
 
   * Prepare the credentials:
+
     * Create a Service account.
 
       For example:
@@ -58,12 +59,18 @@ The user must provide the credentials using the application parameters.
 
 * Run the code.
 
-  You must provide 2 parameters:
+  You must provide 2 parameters, replace the values of:
 
-  * `<CREDENTIALS_FILE_NAME>` = Path and name of the JSON credential file
-  * `<PROJECT_ID>`            = Name of the Google Cloud Project
+  * `<CREDENTIALS_FILE_NAME>` by path and name of the JSON credential file.
+  * `<PROJECT_ID>`            by name of the Google Cloud Project.
 
   Run application:
+
+  ```bash
+  java -jar gcloudstoragelistallparam.jar <CREDENTIALS_FILE_NAME> <PROJECT_ID>
+  ```
+
+  Example:
 
   ```bash
   java -jar gcloudstoragelistallparam.jar ~/.gcloud/gcloud-java-examples.json gcloud-java-examples

@@ -46,6 +46,7 @@ List information about the objects in a Cloud Storage bucket in a Google Cloud P
   * Go to the Google Cloud Project.
 
   * Prepare the credentials:
+
     * Create a Service account.
 
       For example:
@@ -68,14 +69,14 @@ List information about the objects in a Cloud Storage bucket in a Google Cloud P
 
 * Run the code.
 
-  You must provide 1 parameter:
-
-  * `<BUCKET_NAME>` = Name of the bucket
+  You must provide 1 parameter, replace the value of:
+  
+  * `<BUCKET_NAME>` by Bucket name.
 
   Run application:
 
   ```bash
-  java -jar gcloudstoragelist.jar bucket-example
+  java -jar gcloudstoragelist.jar <BUCKET_NAME>
   ```
 
 * Test the application.
